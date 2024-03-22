@@ -13,7 +13,7 @@
                         <a href = "../mytour/mytour_map.html" class="nav-link active fs-5" aria-current="page" href="#">나만의 여행계획</a>
                     </li>
                     <li class = "navbar-item">
-                        <a href = "../html/board.html" class="nav-link active fs-5" aria-current="page" href="#">게시판</a>
+                        <a href = "${root}/board?action=list" class="nav-link active fs-5" aria-current="page" href="#">게시판</a>
                     </li>
                     <c:if test="${empty sessionScope.userinfo}">
                     <li id = 'nav-login' class = "navbar-item">

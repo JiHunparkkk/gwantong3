@@ -20,7 +20,9 @@
 <img src="docs/기본기능3.png" width="800">
 <img src="docs/기본기능4.png" width="800">
 <img src="docs/기본기능5.png" width="800">
-<img src="docs/기본기능6.png" width="800>
+<img src="docs/기본기능6.png" width="800">
+<img src="docs/기본기능7.png" width="800">
+<img src="docs/기본기능8.png" width="800">
 
 - ## ✔ 기본 기능
     - 메인 페이지 및 메뉴 구성

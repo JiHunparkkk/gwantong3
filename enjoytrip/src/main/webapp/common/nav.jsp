@@ -29,7 +29,7 @@
                         <a class="nav-link active fs-5" aria-current="page" href="${root}/user?action=logout" >로그아웃</a>
                     </li>
                     <li id = 'nav-mypage' class = "navbar-item">
-                        <a href = "../mypage/mypage.html" class="nav-link active fs-5" aria-current="page" href="#" >마이페이지</a>
+                        <a href="${root}/user/myPage.jsp" class="nav-link active fs-5" aria-current="page">마이페이지</a>
                     </li>
                     </c:if>
                 </ul> 

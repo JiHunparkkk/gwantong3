@@ -44,6 +44,12 @@ public class UserController extends HttpServlet {
 		} else if (action.equals("findpw")) {
 			path = findPw(request, response);
 			forward(request, response, path);
+		} else if (action.equals("mvmodify")) {
+			path = "/user/modify.jsp";
+			forward(request, response, path);
+		} else if (action.equals("modify")) {
+			path = modify(request, response);
+			redirect(request, response, path);
 		}
 	}
 
@@ -131,5 +137,20 @@ public class UserController extends HttpServlet {
 			request.setAttribute("msg", "아이디 또는 이메일이 일치하지 않습니다.");
 			return "/user/findPw.jsp";
 		}
+	}
+
+	private String modify(HttpServletRequest request, HttpServletResponse response) {
+		UserDto userDto = new UserDto();
+		userDto.setUserId(request.getParameter("userid"));
+		userDto.setUserPwd(request.getParameter("userpwd"));
+		userDto.setUserName(request.getParameter("username"));
+		userDto.setUserEmail(request.getParameter("useremail"));
+		userDto.setUserAddr(request.getParameter("useraddr"));
+		userDto.setUserGender(request.getParameter("usergender"));
+		UserService userService = UserServiceImpl.getInstance();
+		userService.updateUser(userDto);
+		HttpSession session = request.getSession();
+		session.setAttribute("userinfo", userDto);
+		return "/user/myPage.jsp";
 	}
 }

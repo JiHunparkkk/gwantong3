@@ -15,9 +15,6 @@
 <body>
 <%@ include file="/common/nav.jsp" %>
     <main>
-        <!-- <div class="invisible container p-5">
-            div.
-        </div> -->
         <div class="container centered pt-5 mt-5">
             <div class="row justify-content-center pt-5 mt-5 ms-3">
                 <span class="h2 text-center text-dark fw-bolder">내 정보 확인</span>
@@ -48,14 +45,15 @@
             </div>
             <div class="container centered">
                 <div class="row justify-content-center p-0 ">
-                    <button class="w-25 bg-warning" id="updateuser">내 정보 수정</button>
+                  <a class="w-25 bg-warning" id="updateuser" href="${root}/user?action=mvmodify" role="button">내 정보 수정</a>
                     <button class="w-25 bg-danger" id="deleteuser">내 정보 삭제</button>
                 </div>
             </div>
         </div>
-
     </main>
-    <script type="text/javascript" src="./js/mypage.js"></script>
+    <script>
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

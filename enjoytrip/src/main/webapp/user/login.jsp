@@ -21,7 +21,7 @@
       <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
         <a href="">
         <div class="row justify-content-center mt-5">
-          <img src="${root}/imgs/logo.png" class="img-thumnail" alt="로고" style="width: 200px; height: auto;">
+          <img src="${root}/img/nav_logo.png" class="img-thumnail" alt="로고" style="width: 200px; height: auto;">
         </div>
         </a>
         <div class="card shadow">
@@ -56,9 +56,6 @@
               <a href="${root}/user?action=mvfindpw" class="text-decoration-none text-muted small" onclick="javascript:findpw()">비밀번호 찾기</a>
             </li>
             <div class="vr no-gutters"></div>
-            <li class="list-group-item border-0 p-0 ms-3 me-3">
-              <a href="" class="text-decoration-none text-muted small">아이디 찾기</a>
-            </li>
             <div class="vr"></div>
             <li class="list-group-item border-0 p-0 ms-3">
               <a href="${root}/user?action=mvjoin" class="text-decoration-none text-muted small">회원가입</a>
@@ -72,7 +69,7 @@
     <div class="row">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-primary fw-bolder fs-4 text-center mt-0" href="#">Excuse Me</a>
+          <a class="nav-link text-primary fw-bolder fs-4 text-center mt-0" href="${root}/index.jsp">Excuse Me</a>
         </li>
         <li class="nav-item ">
           <a class="nav-link text-dark text-center mt-2" href="#">개인정보처리방침</a>
@@ -81,7 +78,7 @@
           <a class="nav-link text-dark text-center mt-2" href="#">이용약관</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-muted text-center mt-2" href="#">&copy;SSAFY 광주 4반 김민주 박지훈 신민경 이지표</a>
+            <a class="nav-link text-muted text-center mt-2" href="#">&copy;SSAFY 광주 4반 박지훈 이지표</a>
         </li>
       </ul>
     </div>

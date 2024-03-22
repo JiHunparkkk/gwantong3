@@ -1,8 +1,0 @@
-.metadata/
-Servers/
-build/
-*.gitignore
-*.classpath
-*.project
-*.settings/
-target/

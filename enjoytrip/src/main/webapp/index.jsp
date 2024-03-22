@@ -19,12 +19,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="${ root }/css/main.css">
     <link rel="stylesheet" href="${ root }/css/map.css">
-    <title>저기요 EXCUSE ME</title>
+    <title>저기요 EXCUSE ME</title>    
 </head>
-<style>
-    
-</style>
+
 <body>
+
     <header class="navbar navbar-expand-lg bg-body-tertiary shadow-sm ps-5 pe-5" >
         <div class = "container-fluid">
             <a><img class = 'col-4 ms-4' src = '${ root }/img/nav_logo.png'></a>
@@ -168,8 +167,11 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous">
 </script>
-<script src="../js/map.js"></script>
-<script type = "module" src = "../js/main.js"></script>
+
+<!-- map modal 추가 -->
+<!-- <script src="../js/map.js"></script> -->
+<%@ include file="/map.jsp" %>
+<script type = "module" src = "${root}/js/main.js"></script>
 <script>
     AOS.init();
 </script>

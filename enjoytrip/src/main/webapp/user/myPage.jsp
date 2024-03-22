@@ -46,7 +46,7 @@
             <div class="container centered">
                 <div class="row justify-content-center p-0 ">
                   <a class="w-25 bg-warning" id="updateuser" href="${root}/user?action=mvmodify" role="button">내 정보 수정</a>
-                    <button class="w-25 bg-danger" id="deleteuser">내 정보 삭제</button>
+                  <a class="w-25 bg-danger" id="deleteuser" href="${root}/user?action=delete" role="button">회원 탈퇴</a>
                 </div>
             </div>
         </div>

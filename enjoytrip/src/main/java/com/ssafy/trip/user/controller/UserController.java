@@ -50,6 +50,9 @@ public class UserController extends HttpServlet {
 		} else if (action.equals("modify")) {
 			path = modify(request, response);
 			redirect(request, response, path);
+		} else if (action.equals("delete")) {
+			path = delete(request, response);
+			redirect(request, response, path);
 		}
 	}
 
@@ -152,5 +155,14 @@ public class UserController extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("userinfo", userDto);
 		return "/user/myPage.jsp";
+	}
+
+	private String delete(HttpServletRequest request, HttpServletResponse response) {
+		UserDto userDto = (UserDto) request.getSession().getAttribute("userinfo");
+		UserService userService = UserServiceImpl.getInstance();
+		userService.deleteUser(userDto.getUserId());
+		HttpSession session = request.getSession();
+		session.invalidate();
+		return "/index.jsp";
 	}
 }

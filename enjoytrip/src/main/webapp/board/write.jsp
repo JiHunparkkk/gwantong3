@@ -2,6 +2,7 @@
 	pageEncoding="utf-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c"%>
 <c:set var="root" value="${pageContext.request.contextPath}"></c:set>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +14,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../css/board_write.css">
+    <link rel="stylesheet" href="${root}/css/board_write.css">
     <title>저기요 EXCUSE ME</title>
 </head>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
@@ -33,11 +34,12 @@
         display: flex;
         
     }
+    
     /* 폰트 설정 end */
+    
 </style>
 <body>
    <%@ include file="/common/nav.jsp" %>
-
     <main>
         <div class="main">
             <div class = 'container-1'>
@@ -66,11 +68,11 @@
     </footer>
 </body>
 
-<script
+<!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F    7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous">
-</script>
+</script> -->
 
 <script>
 document.querySelector("#btn-enroll").addEventListener("click", function () {

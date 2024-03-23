@@ -10,7 +10,7 @@
             <nav class="collapse navbar-collapse mr-1" id="navbarNav">
                 <ul class="navbar-nav ms-auto me-2 grid gap-4">
                     <li class = "navbar-item">
-                        <a href = "../mytour/mytour_map.html" class="nav-link active fs-5" aria-current="page" href="#">나만의 여행계획</a>
+                        <a href = "${root}/mytour/mytour_map.jsp" class="nav-link active fs-5" aria-current="page" href="#">나만의 여행계획</a>
                     </li>
                     <li class = "navbar-item">
                         <a href = "${root}/board?action=list" class="nav-link active fs-5" aria-current="page" href="#">게시판</a>

@@ -7,5 +7,7 @@ import com.ssafy.trip.board.model.dto.BoardDto;
 
 public interface BoardDao {
 	List<BoardDto> list() throws SQLException;
-
+	int write(BoardDto boardDto) throws SQLException;
+	BoardDto view(int id) throws SQLException;
+	void delete(int id) throws SQLException;
 }

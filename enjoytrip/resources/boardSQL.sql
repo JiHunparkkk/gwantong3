@@ -20,7 +20,7 @@ USE `ssafytrip` ;
 DROP TABLE IF EXISTS `ssafytrip`.`board` ;
 
 CREATE TABLE IF NOT EXISTS `ssafytrip`.`board` (
-  `board_id` VARCHAR(16) NOT NULL,
+  `board_id`  int AUTO_INCREMENT NOT NULL,
   `title` VARCHAR(20) NOT NULL,
   `contents` VARCHAR(16) NOT NULL,
   `user_id` VARCHAR(50) NULL DEFAULT NULL,

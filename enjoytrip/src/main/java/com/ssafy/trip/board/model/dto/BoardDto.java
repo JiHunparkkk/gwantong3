@@ -2,16 +2,16 @@ package com.ssafy.trip.board.model.dto;
 
 public class BoardDto {
 	
-	private String board_id;
+	private Integer board_id;
 	private String title;
 	private String contents;
 	private String user_id;
 	private String register_time;
 	
-	public String getBoard_id() {
+	public Integer getBoard_id() {
 		return board_id;
 	}
-	public void setBoard_id(String board_id) {
+	public void setBoard_id(Integer board_id) {
 		this.board_id = board_id;
 	}
 	public String getTitle() {

@@ -6,5 +6,7 @@ import com.ssafy.trip.board.model.dto.BoardDto;
 
 public interface BoardService {
 	List<BoardDto> list() throws Exception;
-	
+	int write(BoardDto boardDto) throws Exception;
+	BoardDto view(int id) throws Exception;
+	void delete(int id) throws Exception;
 }

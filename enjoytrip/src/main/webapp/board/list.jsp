@@ -14,7 +14,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../css/board.css">
+    <link rel="stylesheet" href="${root}/css/board.css">
     <title>저기요 EXCUSE ME</title>
 </head>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
@@ -53,6 +53,18 @@
                     </tr>
                 </thead>
                 <tbody>
+                	<c:forEach var="board" items="${board}">
+                		<tr>
+                			<th>${board.board_id}</th>
+                			<td>
+                			<a href="${ root }/board?action=view&id=${board.board_id}">
+                				${board.title}
+                			</a>
+                			</td>
+                			<td>${board.user_id}</td>
+                			<td>${board.register_time}</td>
+               			</tr>
+            		</c:forEach>
                 </tbody>
             </table>
             <div class = 'button-container'>
@@ -61,7 +73,7 @@
         </div>
     </main>
     <footer class="navbar bg-dark nav justify-content-center pt-4 pb-4" data-bs-theme="dark">
-        <p class = "text-light">© SSAFY 광주_4반 김민주 박지훈 신민경 이지표</p>
+        <p class = "text-light">© SSAFY 광주_4반 박지훈 이지표</p>
     </footer>
 </body>
 <%-- <script src="${root}/js/board.js"></script> --%>

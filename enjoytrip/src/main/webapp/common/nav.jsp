@@ -3,7 +3,7 @@
 <%@ taglib uri="jakarta.tags.core" prefix="c"%>
     <header class="navbar navbar-expand-lg bg-body-tertiary shadow-sm ps-5 pe-5" >
         <div class = "container-fluid">
-            <a><img class = 'col-4 ms-4' src = '${ root }/img/nav_logo.png'></a>
+            <a href="${root }"><img class = 'col-4 ms-4' src = '${ root }/img/nav_logo.png'></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

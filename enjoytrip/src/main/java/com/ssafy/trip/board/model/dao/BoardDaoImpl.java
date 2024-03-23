@@ -129,4 +129,28 @@ public class BoardDaoImpl implements BoardDao{
 			DBUtil.close(pstmt, conn);
 		}
 	}
+
+	@Override
+	public void modify(BoardDto boardDto) throws SQLException {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = DBUtil.getConnection();
+			
+			StringBuilder sql = new StringBuilder();
+			sql.append("update board set title=? ,contents=? \n");
+			sql.append(" where board_id=? ");
+		
+			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.setString(1, boardDto.getTitle());
+			pstmt.setString(2, boardDto.getContents());
+			pstmt.setInt(3, boardDto.getBoard_id());
+
+
+			pstmt.executeUpdate();
+		} finally {
+			DBUtil.close(pstmt, conn);
+		}
+	}
 }

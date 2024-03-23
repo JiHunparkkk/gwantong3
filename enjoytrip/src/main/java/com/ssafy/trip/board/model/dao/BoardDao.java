@@ -10,4 +10,5 @@ public interface BoardDao {
 	int write(BoardDto boardDto) throws SQLException;
 	BoardDto view(int id) throws SQLException;
 	void delete(int id) throws SQLException;
+	void modify(BoardDto boardDto) throws SQLException;
 }

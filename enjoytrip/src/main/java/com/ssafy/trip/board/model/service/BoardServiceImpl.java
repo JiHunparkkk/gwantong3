@@ -36,5 +36,10 @@ public class BoardServiceImpl implements BoardService{
 	@Override
 	public void delete(int id) throws Exception {
 		boardDao.delete(id);
+	}
+
+	@Override
+	public void modify(BoardDto boardDto) throws Exception {
+		boardDao.modify(boardDto);
 	}	
 }

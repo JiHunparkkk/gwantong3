@@ -46,13 +46,23 @@ public class BoardController extends HttpServlet {
 			} else {
 				response.sendRedirect(request.getContextPath() + path);
 			}
-		}else if("view".equals(action)) {
+		} else if("view".equals(action)) {
 			path = view(request, response);
 			RequestDispatcher dispatcher = request.getRequestDispatcher(path);
 			dispatcher.forward(request, response);
-		}else if("delete".equals(action)) {
+		} else if("delete".equals(action)) {
 			delete(request, response);
 			response.sendRedirect(request.getContextPath() + "/board?action=list");
+		} else if("mvModify".equals(action)) {
+			path = mvModify(request, response);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/board/modify.jsp");
+			dispatcher.forward(request, response);
+		} else if("modify".equals(action)) {
+			path = modify(request, response);
+			response.sendRedirect(request.getContextPath() + path);
+		} else {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/board/error.jsp");
+			dispatcher.forward(request, response);
 		}
 	}
 
@@ -115,5 +125,34 @@ public class BoardController extends HttpServlet {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private String mvModify (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int board_id = Integer.parseInt(request.getParameter("id"));
+		
+		try {
+			BoardDto boardDto = boardService.view(board_id);
+			request.setAttribute("board", boardDto);
+			return "/board/modify.jsp";
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return "";
+	}
+	
+	private String modify (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int board_id = Integer.parseInt(request.getParameter("id"));
+		BoardDto boardDto = new BoardDto();
+		boardDto.setBoard_id(board_id);
+		boardDto.setTitle(request.getParameter("title"));
+		boardDto.setContents(request.getParameter("contents"));
+		
+		try {
+			boardService.modify(boardDto);
+			return "/board?action=view&id="+board_id;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "/board?action=list";
 	}
 }

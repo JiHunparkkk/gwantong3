@@ -9,4 +9,5 @@ public interface BoardService {
 	int write(BoardDto boardDto) throws Exception;
 	BoardDto view(int id) throws Exception;
 	void delete(int id) throws Exception;
+	void modify(BoardDto boardDto) throws Exception;
 }
